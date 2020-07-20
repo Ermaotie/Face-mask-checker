@@ -90,11 +90,11 @@ def check_image():
         cv2.putText(draw_image, person_name, (int(x1), int(y1)), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 3)
 
     while (1):
-        cv2.imshow('porson_detect', draw_image)  
+        cv2.imshow('person_detect', draw_image)  
         if cv2.waitKey(1) & 0xFF == ord('w'):  
             cv2.imwrite("test1.jpg", draw_image)
             break
-        if cv2.getWindowProperty('porson_detect', cv2.WND_PROP_AUTOSIZE) < 1:
+        if cv2.getWindowProperty('person_detect', cv2.WND_PROP_AUTOSIZE) < 1:
             break
     cv2.destroyAllWindows()
 
